@@ -1,8 +1,19 @@
+import { useState, useEffect } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import axios from 'axios';
 import Book from '../components/Book';
-import books from '../components/Books';
 
 const HomeScreen = () => {
+    const [books, setBooks] = useState([]);
+
+    useEffect(() => {
+      const fetchBooks = async () => {
+        const { data } = await axios.get('/api/books');
+        setBooks(data);
+      };
+  
+      fetchBooks();
+    }, []);
   return (
     <>
       <h1>Latest Books</h1>
