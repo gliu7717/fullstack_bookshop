@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import App from './App';
-
+import BookScreen from './screens/BookScreen';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -16,6 +16,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index={true} path='/' element={<HomeScreen />} />
+      <Route path='/book/:id' element={<BookScreen />} />
     </Route>
   )
 );
