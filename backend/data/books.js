@@ -1,6 +1,5 @@
 const books = [
     {
-      _id: '1',
       name: 'Algebra',
       image: '/images/algebra.jpg',
       description:'Algebra Text Book',
@@ -12,7 +11,6 @@ const books = [
       numReviews: 12,
     },
     {
-      _id: '2',
       name: 'biology',
       image: '/images/biology.jpg',
       description:'Biology Text Book',
@@ -24,7 +22,6 @@ const books = [
       numReviews: 8,
     },
     {
-      _id: '3',
       name: 'calculus',
       image: '/images/calculus.jpg',
       description:'Calculus text book',
@@ -36,7 +33,6 @@ const books = [
       numReviews: 12,
     },
     {
-      _id: '4',
       name: 'chemistry',
       image: '/images/chemistry.jpg',
       description:'Chemistry text book',
@@ -48,7 +44,6 @@ const books = [
       numReviews: 12,
     },
     {
-      _id: '5',
       name: 'English',
       image: '/images/english.jpg',
       description: 'English Book',
@@ -60,7 +55,6 @@ const books = [
       numReviews: 10,
     },
     {
-      _id: '6',
       name: 'physics',
       image: '/images/physics.jpg',
       description:'physics textbook',
