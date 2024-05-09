@@ -6,6 +6,7 @@ import Book from '../models/bookModel.js';
 // @access  Public
 const getBooks = asyncHandler(async (req, res) => {
   const books = await Book.find({});
+  console.log(books)
   res.json(books);
 });
 
