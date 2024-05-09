@@ -4,7 +4,7 @@ const notFound = (req, res, next) => {
     next(error);
   };
   
-  const errorHandler = (err, req, res, next) => {
+const errorHandler = (err, req, res, next) => {
     let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
     let message = err.message;
   
@@ -18,6 +18,6 @@ const notFound = (req, res, next) => {
       message: message,
       stack: process.env.NODE_ENV === 'production' ? null : err.stack,
     });
-  };
+};
   
-  export { notFound, errorHandler };
+export { notFound, errorHandler };
