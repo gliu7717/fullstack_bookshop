@@ -20,12 +20,16 @@ const CartScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const addToCartHandler = async (product, qty) => {
-    dispatch(addToCart({ ...product, qty }));
+  const addToCartHandler = async (book, qty) => {
+    dispatch(addToCart({ ...book, qty }));
   };
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
+  };
+
+  const checkoutHandler = () => {
+    navigate('/login?redirect=/shipping');
   };
 
   return (
@@ -45,7 +49,7 @@ const CartScreen = () => {
                     <Image src={item.image} alt={item.name} fluid rounded />
                   </Col>
                   <Col md={3}>
-                    <Link to={`/product/${item._id}`}>{item.name}</Link>
+                    <Link to={`/book/${item._id}`}>{item.name}</Link>
                   </Col>
                   <Col md={2}>${item.price}</Col>
                   <Col md={2}>
@@ -96,6 +100,7 @@ const CartScreen = () => {
                 type='button'
                 className='btn-block'
                 disabled={cartItems.length === 0}
+                onClick={checkoutHandler}
               >
                 Proceed To Checkout
               </Button>

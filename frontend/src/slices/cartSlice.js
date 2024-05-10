@@ -28,7 +28,7 @@ const cartSlice = createSlice({
 
         // Update the prices and save to storage
         // Update the cart state using the updateCart function
-        return updateCart(state, item);
+        return updateCart(state);
     },
     removeFromCart: (state, action) => {
         // Filter out the item to remove from the cart
